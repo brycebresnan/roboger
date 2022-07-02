@@ -33,3 +33,17 @@ function addBeepBoop(array) {
   }
   return array;
 }
+
+
+//UI Logic
+function gatherUserInput() {
+  
+}
+
+function displayResults() {
+
+}
+
+window.addEventListener("load", function(){
+  
+})
