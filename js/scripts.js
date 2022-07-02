@@ -46,13 +46,16 @@ function gatherUserInput() {
   if (!isNaN(userInput)) {
     return userInput;
   }
+  else if (userInput != Math.floor(userInput)) {
+    errorMessage();
+  }
   else {
     errorMessage();
   }
 }
 
 function errorMessage() {
-  console.log("error!");
+  document.getElementById("results").innerText = "Please input any single whole intiger";
 }
 
 function displayResults() {
