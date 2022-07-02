@@ -16,3 +16,13 @@ h1 {
   line-height: 1.1;
   padding-top: 50px;
 }
+
+.btn {
+  font-weight: bold;
+  background-color: rgb(163, 163, 163);
+}
+
+.btn:hover {
+  color: rgb(48, 48, 48);
+  background-color: rgb(255, 139, 45);
+}
