@@ -1,0 +1,36 @@
+Describe: numberListMaker()
+
+Test: "If the input is a number, it should return 1."
+Code:
+const number = 10;
+numberListMaker(number);
+Expected Result: 1
+
+Test: "If the input is anything but a number, it should return -1"
+Code:
+const string = "ten";
+numberListMaker(number);
+Expected Result: -1
+
+Test: "If the input is negative intiger it will return a 2"
+Code:
+const negNumber = -10;
+numberListMaker(negNumber);
+Expected Result: 2
+
+Test: "It should return an array with a list of numbers from 0 to the number passed into the function."
+Code:
+const number = 10
+numberListMaker(number);
+Expected Result: [0,1,2,3,4,5,6,7,8,9,10]
+
+Test:"It should return an array with a list of negative numbers from 0 to the negative number passed into the function."
+Code:
+const negNumber = -10;
+numberListMaker(negNumber);
+Expected Result: [0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+
+Test:
+Code:
+
+Expected Result: 
