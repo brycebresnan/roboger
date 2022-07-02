@@ -34,23 +34,27 @@ function addBeepBoop(array) {
   return array;
 }
 
-// function roboger(number) {
-//   let numberList = numberListMaker(number);
-//   return addBeepBoop(numberList);
-// }
+function roboger(event) {
+  event.preventDefault();
+  let input = gatherUserInput();
+  let numberList = numberListMaker(input);
+  displayResults(addBeepBoop(numberList));
+}
 
 //UI Logic
 function gatherUserInput() {
   let userInput = parseInt(document.querySelector("input[name='number']").value);
   console.log(userInput);
   if (!isNaN(userInput)) {
+    console.log("firing! not NaN");
     return userInput;
   }
   else if (userInput != Math.floor(userInput)) {
-    errorMessage();
+    return -1;
   }
   else {
-    errorMessage();
+    console.log("firing!");
+    return -1;
   }
 }
 
@@ -58,10 +62,11 @@ function errorMessage() {
   document.getElementById("results").innerText = "Please input any single whole intiger";
 }
 
-function displayResults() {
-
+function displayResults(finishedArray) {
+  document.getElementById("results").innerText = finishedArray;
 }
 
 window.addEventListener("load", function(){
-  
+  const form = document.getElementById("userNumber");
+  form.addEventListener("submit", roboger);
 })
