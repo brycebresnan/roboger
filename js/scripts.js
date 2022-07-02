@@ -34,10 +34,25 @@ function addBeepBoop(array) {
   return array;
 }
 
+// function roboger(number) {
+//   let numberList = numberListMaker(number);
+//   return addBeepBoop(numberList);
+// }
 
 //UI Logic
 function gatherUserInput() {
-  
+  let userInput = parseInt(document.querySelector("input[name='number']").value);
+  console.log(userInput);
+  if (!isNaN(userInput)) {
+    return userInput;
+  }
+  else {
+    errorMessage();
+  }
+}
+
+function errorMessage() {
+  console.log("error!");
 }
 
 function displayResults() {
