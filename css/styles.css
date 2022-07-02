@@ -9,12 +9,18 @@ body {
 }
 
 h1 {
-  color: rgb(245, 245, 245);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 100px;
-  font-weight:lighter;
-  line-height: 1.1;
   padding-top: 50px;
+  padding-bottom:10px;
+  font-family: "Bookman Old Style"; 
+  font-size: 80px; 
+  font-style: normal; 
+  font-variant: small-caps; 
+  font-weight: 700; 
+  line-height: .9; 
+}
+
+form label {
+  padding-bottom:10px;
 }
 
 .btn {
