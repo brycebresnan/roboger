@@ -38,7 +38,7 @@ function gatherUserInput() {
 }
 
 function errorMessage() {
-  document.getElementById("results").innerText = "Mr. Rodgers might tollerate make-believe numbers, but this robot won't! Please input any single whole intiger.";
+  document.getElementById("results").innerText = "Mr. Rogers might tolerate make-believe numbers, but this robot won't! Please input any single whole integer.";
 }
 
 function displayResults(array) {
