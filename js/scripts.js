@@ -1,22 +1,17 @@
 function numberListMaker(number) {
   const numberList = [];
-  if (typeof(number) === typeof(1)) {
-    if (number >= 0) {
-      for (i=0;i<=number;i++){
-        numberList.push(i);
-      }
-      return numberList;
+  if (number >= 0) {
+    for (i=0;i<=number;i++){
+      numberList.push(i);
     }
-    else {
-      for (i=0;i>=number;i--){
-        numberList.push(i);
-      }
-    }
-      return numberList;
-    }
-  else {
-    return 0;
+    return numberList;
   }
+  else {
+    for (i=0;i>=number;i--){
+      numberList.push(i);
+    }
+  }
+    return numberList;
 }
 
 function addBeepBoop(array) {
@@ -36,33 +31,32 @@ function addBeepBoop(array) {
 
 function roboger(event) {
   event.preventDefault();
-  let input = gatherUserInput();
-  let numberList = numberListMaker(input);
-  displayResults(addBeepBoop(numberList));
+  
+  let userInput = gatherUserInput();
+  
+  if (!isNaN(userInput)) {
+    let numberList = numberListMaker(userInput);
+    let beepBoopArray = addBeepBoop(numberList);
+    displayResults(beepBoopArray);
+  }
+  else {
+    console.log("firing!");
+    errorMessage();
+  }
 }
 
 //UI Logic
 function gatherUserInput() {
   let userInput = parseInt(document.querySelector("input[name='number']").value);
-  console.log(userInput);
-  if (!isNaN(userInput)) {
-    console.log("firing! not NaN");
-    return userInput;
-  }
-  else if (userInput != Math.floor(userInput)) {
-    return -1;
-  }
-  else {
-    console.log("firing!");
-    return -1;
-  }
+  return userInput;
 }
 
 function errorMessage() {
-  document.getElementById("results").innerText = "Please input any single whole intiger";
+  document.getElementById("results").innerText = "Mr. Rodgers might tollerate make-believe numbers, but this robot won't! Please input any single whole intiger.";
 }
 
-function displayResults(finishedArray) {
+function displayResults(array) {
+  let finishedArray = array.join(", ");
   document.getElementById("results").innerText = finishedArray;
 }
 
