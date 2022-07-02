@@ -1,3 +1,4 @@
+//Business Logic
 function numberListMaker(number) {
   const numberList = [];
   if (number >= 0) {
@@ -17,33 +18,18 @@ function numberListMaker(number) {
 function addBeepBoop(array) {
   for (let index = 0; index < array.length; index++) {
     if (array[index].toString().includes("3")){
-      array.splice(index, 1, "Won't you be my neighbor?" );
+      array.splice(index, 1, '"Won\'t you be my neighbor?"' );
     }
     else if (array[index].toString().includes("2")){
-      array.splice(index, 1, "Boop!" );
+      array.splice(index, 1, '"Boop!"' );
     }
     else if (array[index].toString().includes("1")){
-      array.splice(index, 1, "Beep!" );
+      array.splice(index, 1, '"Beep!"' );
     }
   }
   return array;
 }
 
-function roboger(event) {
-  event.preventDefault();
-  
-  let userInput = gatherUserInput();
-  
-  if (!isNaN(userInput)) {
-    let numberList = numberListMaker(userInput);
-    let beepBoopArray = addBeepBoop(numberList);
-    displayResults(beepBoopArray);
-  }
-  else {
-    console.log("firing!");
-    errorMessage();
-  }
-}
 
 //UI Logic
 function gatherUserInput() {
@@ -64,3 +50,18 @@ window.addEventListener("load", function(){
   const form = document.getElementById("userNumber");
   form.addEventListener("submit", roboger);
 })
+
+function roboger(event) {
+  event.preventDefault();
+  
+  let userInput = gatherUserInput();
+  
+  if (!isNaN(userInput)) {
+    let numberList = numberListMaker(userInput);
+    let beepBoopArray = addBeepBoop(numberList);
+    displayResults(beepBoopArray);
+  }
+  else {
+    errorMessage();
+  }
+}
