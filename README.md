@@ -13,6 +13,11 @@
 * bootstrap
 
 
+## TDD Testing
+
+* View testing file [here](tests.txt)
+
+
 ## Setup/Installation Requirements
 
 * Clone this repository from GitHub.
