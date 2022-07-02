@@ -11,7 +11,7 @@ body {
 h1 {
   color: rgb(245, 245, 245);
   font-family: 'Open Sans', sans-serif;
-  font-size: 60px;
+  font-size: 100px;
   font-weight:lighter;
   line-height: 1.1;
   padding-top: 50px;
@@ -25,4 +25,8 @@ h1 {
 .btn:hover {
   color: rgb(48, 48, 48);
   background-color: rgb(255, 139, 45);
+}
+
+#results {
+  color:rgb(255, 139, 45)
 }
