@@ -18,3 +18,18 @@ function numberListMaker(number) {
     return 0;
   }
 }
+
+function addBeepBoop(array) {
+  for (let index = 0; index < array.length; index++) {
+    if (array[index].toString().includes("3")){
+      array.splice(index, 1, "Won't you be my neighbor?" );
+    }
+    else if (array[index].toString().includes("2")){
+      array.splice(index, 1, "Boop!" );
+    }
+    else if (array[index].toString().includes("1")){
+      array.splice(index, 1, "Beep!" );
+    }
+  }
+  return array;
+}

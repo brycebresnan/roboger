@@ -4,33 +4,101 @@ Test: "If the input is a number, it should return 1."
 Code:
 const number = 10;
 numberListMaker(number);
-Expected Result: 1
+Expected Output: 1
 
 Test: "If the input is anything but a number, it should return -1"
 Code:
 const string = "ten";
 numberListMaker(number);
-Expected Result: -1
+Expected Output: -1
 
 Test: "If the input is negative intiger it will return a 2"
 Code:
 const negNumber = -10;
 numberListMaker(negNumber);
-Expected Result: 2
+Expected Output: 2
 
 Test: "It should return an array with a list of numbers from 0 to the number passed into the function."
 Code:
 const number = 10
 numberListMaker(number);
-Expected Result: [0,1,2,3,4,5,6,7,8,9,10]
+Expected Output: [0,1,2,3,4,5,6,7,8,9,10]
 
 Test:"It should return an array with a list of negative numbers from 0 to the negative number passed into the function."
 Code:
 const negNumber = -10;
 numberListMaker(negNumber);
-Expected Result: [0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+Expected Output: [0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+
+
+Describe: addBeepBoop()
+
+Test: "It should take an array and return it unchanged"
+Code:
+const array = [0,"zero",1,-10,"hello!"];
+addBeepBoop(array);
+Expected Output: [0,"zero",1,-10,"hello!"]
+
+Test: "If the array contains a 1, it should return 1"
+Code:
+const array = [1];
+addBeepBoop(array);
+Expected Output: 1
+
+Test: "If the array contains a 1 in any digits place, it should return 1"
+Code:
+const array = [2000001];
+addBeepBoop(array);
+Expected Output: 1
+
+Test: "If the array contains a 2 in any place, it should return 2"
+Code:
+const array = [2];
+addBeepBoop(array);
+Expected Output: 2
+
+Test: "If the array contains a 3 in any place, it should return 3"
+Code:
+const array = [3];
+addBeepBoop(array);
+Expected Output: 3
+
+Test: "It should return a 3, even if there's a 2 or a 1 in the number."
+Code:
+const array = [123]
+addBeepBoop(array);
+Expected Output:3
+
+Test: "It should return a 2, even if there's a 1 in the number."
+Code: 
+const array = [122]
+addBeepBoop(array);
+Expected Output: 2
+
+Test: "If the number contains a 1, the entire number is replaced with 'Beep!'"
+Code: 
+const array = [1];
+addBeepBoop(array);
+Expected Output: 'Beep!'
+
+Test: "If the number contains a 2, the entire number is replaced with 'Boop!'"
+Code:
+const array = [2];
+addBeepBoop(array);
+Expected Output: 'Boop!'
+
+Test:"If the number contains a 3, the entire number is replaced with 'Won't you be my neighbor?'"
+Code:
+const array = [3];
+addBeepBoop(array);
+Expected Output:'Won't you be my neighbor?'
+
+Test: "It should replace multiple items in the list of numbers with their corresponding strings as stated above."
+Code:
+const array = [0,1,2,3,4,5,6,7,8,9,10]
+addBeepBoop(array);
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep!']
 
 Test:
 Code:
-
-Expected Result: 
+Expected Output:
